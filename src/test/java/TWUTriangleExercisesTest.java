@@ -9,8 +9,8 @@ import static org.junit.Assert.*;
 
 public class TWUTriangleExercisesTest {
     private TWUTriangleExercises twuExercises;
-    PrintStream console = null;          // 声明（为null）：输出流 (字符设备) console
-    ByteArrayOutputStream bytes = null;  // 声明（为null）：bytes 用于缓存console 重定向过来的字符流
+    private PrintStream console = null;          // 声明（为null）：输出流 (字符设备) console
+    private ByteArrayOutputStream bytes = null;  // 声明（为null）：bytes 用于缓存console 重定向过来的字符流
 
     @Before
     public void setUp() {
@@ -29,14 +29,21 @@ public class TWUTriangleExercisesTest {
     public void shouldPrintRight() throws Exception {
         //assertEquals(twuExercises.getNumber(), 1);
         twuExercises.printTest();
-        String s = new String("hello world\n");
+        String s = "hello world\n";
         assertEquals(s, bytes.toString());
     }
 
     @Test
-    public void shouldPrintOneAsteriskWhenInput1() throws Exception {
+    public void shouldPrintOneAsteriskWhenInput() throws Exception {
         twuExercises.printAsterisk();
-        String s = new String("*\n");
+        String s = "*\n";
+        assertEquals(s, bytes.toString());
+    }
+
+    @Test
+    public void shouldPrintNAsterisksOnOneLineWhenInputN() throws Exception {
+        twuExercises.printAsterisks(8);
+        String s = "********\n";
         assertEquals(s, bytes.toString());
     }
 
