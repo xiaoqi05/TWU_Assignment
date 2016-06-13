@@ -39,5 +39,12 @@ public class TWUDiamondExercisesTest {
         assertEquals(s, bytes.toString());
     }
 
+    @Test
+    public void shouldPrintCenteredDiamondWithNameInMiddle() throws Exception {
+        twuExercises.drawDiamondWithNameInMiddle(3);
+        String s = "  *  \n *** \nxiaoqi\n *** \n  *  \n";
+        assertEquals(s, bytes.toString());
+    }
+
 
 }

@@ -34,6 +34,14 @@ class TWUDiamondExercises extends Asterisk {
     void drawDiamond(int i) {
         StringBuilder resultAsterisks = new StringBuilder();
         if (checkInputNumberIsInvalid(i)) return;
+        resultAsterisks.append(getDiamondWithoutLastLine(i));
+        resultAsterisks.append("\n").append(getIsoscelesString(i).reverse());
+        print(resultAsterisks.toString());
+
+    }
+
+    private StringBuilder getDiamondWithoutLastLine(int i) {
+        StringBuilder resultAsterisks = new StringBuilder();
         for (int j = 0; j < i; j++) {
             if (j == i - 1) {
                 continue;
@@ -43,9 +51,16 @@ class TWUDiamondExercises extends Asterisk {
                 resultAsterisks.append("\n");
             }
         }
-        resultAsterisks.append("\n").append(getIsoscelesString(i).reverse());
-        print(resultAsterisks.toString());
+        return resultAsterisks;
+    }
 
+    void drawDiamondWithNameInMiddle(int i) {
+        StringBuilder resultAsterisks = new StringBuilder();
+        if (checkInputNumberIsInvalid(i)) return;
+        StringBuilder withoutLastLine = getDiamondWithoutLastLine(i);
+        resultAsterisks.append(withoutLastLine);
+        resultAsterisks.append("\nxiaoqi\n").append(withoutLastLine.reverse());
+        print(resultAsterisks.toString());
     }
 }
 
