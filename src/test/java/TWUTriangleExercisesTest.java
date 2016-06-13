@@ -57,14 +57,28 @@ public class TWUTriangleExercisesTest {
     @Test
     public void shouldPrintNRowsAsteriskWhenInputN() throws Exception {
         twuExercises.drawRowsAsterisk(3);
-        String s = "*\n*\n*\n\n";
+        String s = "*\n*\n*\n";
         assertEquals(s, bytes.toString());
     }
 
     @Test
     public void shouldPrint0RowsAsteriskWhenInputNumberIsNonPositive() throws Exception {
         twuExercises.drawRowsAsterisk(-1);
-        String s = "\n";
+        String s = "";
+        assertEquals(s, bytes.toString());
+    }
+
+    @Test
+    public void shouldPrintRightTriangleWithNAsteriskSideLengthWhenInputN() throws Exception {
+        twuExercises.drawRightTriangle(3);
+        String s = "*\n**\n***\n";
+        assertEquals(s, bytes.toString());
+    }
+
+    @Test
+    public void shouldPrintIsoscelesTriangleWithNAsteriskSideLengthWhenInputN() throws Exception {
+        twuExercises.drawIsoscelesTriangle(3);
+        String s = "  *  \n *** \n*****\n\n";
         assertEquals(s, bytes.toString());
     }
 
