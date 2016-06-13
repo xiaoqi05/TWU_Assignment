@@ -25,13 +25,7 @@ class TWUTriangleExercises extends Asterisk {
     }
 
 
-    private boolean checkInputNumberIsInvalid(int i) {
-        if (i <= 0) {
-            print("");
-            return true;
-        }
-        return false;
-    }
+
 
 }
 

@@ -18,4 +18,12 @@ class Asterisk {
     void print(String content) {
         System.out.println(content);
     }
+
+    boolean checkInputNumberIsInvalid(int i) {
+        if (i <= 0) {
+            print("");
+            return true;
+        }
+        return false;
+    }
 }

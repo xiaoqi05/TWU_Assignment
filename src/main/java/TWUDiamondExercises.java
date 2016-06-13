@@ -1,5 +1,5 @@
 
-class TWUDiamondExercises extends Asterisk{
+class TWUDiamondExercises extends Asterisk {
     TWUDiamondExercises() {
     }
 
@@ -20,14 +20,6 @@ class TWUDiamondExercises extends Asterisk{
                 append(getNAsterisks(currentNumberOfAsterisks)).
                 append(getNBlanks(totalLines - currentLine));
         return resultAsterisks;
-    }
-
-    private boolean checkInputNumberIsInvalid(int i) {
-        if (i <= 0) {
-            print("");
-            return true;
-        }
-        return false;
     }
 
 
