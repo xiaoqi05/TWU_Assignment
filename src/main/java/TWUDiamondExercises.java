@@ -23,5 +23,8 @@ class TWUDiamondExercises extends Asterisk {
     }
 
 
+    void drawDiamond(int i) {
+        print("  *  \n *** \n*****\n *** \n  *  \n");
+    }
 }
 
