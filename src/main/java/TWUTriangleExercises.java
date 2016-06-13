@@ -24,5 +24,17 @@ class TWUTriangleExercises {
         }
         System.out.println(resultAsterisks);
     }
+
+    void printRowsAsterisk(int i) {
+        if (i <= 0) {
+            System.out.println("");
+            return;
+        }
+        StringBuffer resultAsterisks = new StringBuffer();
+        for (int j = 0; j < i; j++) {
+            resultAsterisks.append("*\n");
+        }
+        System.out.println(resultAsterisks);
+    }
 }
 

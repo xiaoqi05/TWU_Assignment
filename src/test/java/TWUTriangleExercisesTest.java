@@ -48,11 +48,26 @@ public class TWUTriangleExercisesTest {
     }
 
     @Test
-    public void shouldPrint0AsterisksWhenInputNumberIsNegativeNumber() throws Exception {
+    public void shouldPrint0AsterisksWhenInputNumberIsNonPositive() throws Exception {
         twuExercises.printAsterisks(-1);
         String s = "\n";
         assertEquals(s, bytes.toString());
     }
+
+    @Test
+    public void shouldPrintNRowsAsteriskWhenInputN() throws Exception {
+        twuExercises.printRowsAsterisk(3);
+        String s = "*\n*\n*\n\n";
+        assertEquals(s, bytes.toString());
+    }
+
+    @Test
+    public void shouldPrint0RowsAsteriskWhenInputNumberIsNonPositive() throws Exception {
+        twuExercises.printRowsAsterisk(-1);
+        String s = "\n";
+        assertEquals(s, bytes.toString());
+    }
+
 
 
 }
