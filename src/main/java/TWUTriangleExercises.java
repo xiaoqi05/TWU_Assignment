@@ -4,12 +4,12 @@ class TWUTriangleExercises extends Asterisk {
     }
 
     void drawAsterisk() {
-        System.out.println(getNAsterisks(1));
+        print(getNAsterisks(1).toString());
     }
 
     void drawAsterisks(int i) {
         if (checkInputNumberIsInvalid(i)) return;
-        System.out.println(getNAsterisks(i));
+        print(getNAsterisks(i).toString());
     }
 
     void drawRowsAsterisk(int i) {
@@ -27,7 +27,7 @@ class TWUTriangleExercises extends Asterisk {
 
     private boolean checkInputNumberIsInvalid(int i) {
         if (i <= 0) {
-            System.out.println("");
+            print("");
             return true;
         }
         return false;

@@ -5,11 +5,11 @@ class TWUDiamondExercises extends Asterisk{
 
     void drawIsoscelesTriangle(int i) {
         if (checkInputNumberIsInvalid(i)) return;
-        StringBuffer resultAsterisks = new StringBuffer();
+        StringBuilder resultAsterisks = new StringBuilder();
         for (int j = 0; j < i; j++) {
             resultAsterisks.append(getOneLineInIsoscelesTriangle(j + 1, i)).append("\n");
         }
-        System.out.println(resultAsterisks);
+        print(resultAsterisks.toString());
 
     }
 
@@ -24,7 +24,7 @@ class TWUDiamondExercises extends Asterisk{
 
     private boolean checkInputNumberIsInvalid(int i) {
         if (i <= 0) {
-            System.out.println("");
+            print("");
             return true;
         }
         return false;
