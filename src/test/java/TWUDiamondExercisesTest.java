@@ -28,14 +28,14 @@ public class TWUDiamondExercisesTest {
     @Test
     public void shouldPrintIsoscelesTriangleWithNAsteriskSideLengthWhenInputN() throws Exception {
         twuExercises.drawIsoscelesTriangle(3);
-        String s = "  *  \n *** \n*****\n\n";
+        String s = "  *  \n *** \n*****\n";
         assertEquals(s, bytes.toString());
     }
 
     @Test
     public void shouldPrintCenteredDiamondWithNAsteriskSideLengthWhenInputN() throws Exception {
         twuExercises.drawDiamond(3);
-        String s = "  *  \n *** \n*****\n *** \n  *  \n\n";
+        String s = "  *  \n *** \n*****\n *** \n  *  \n";
         assertEquals(s, bytes.toString());
     }
 

@@ -5,12 +5,20 @@ class TWUDiamondExercises extends Asterisk {
 
     void drawIsoscelesTriangle(int i) {
         if (checkInputNumberIsInvalid(i)) return;
-        StringBuilder resultAsterisks = new StringBuilder();
-        for (int j = 0; j < i; j++) {
-            resultAsterisks.append(getOneLineInIsoscelesTriangle(j + 1, i)).append("\n");
-        }
+        StringBuilder resultAsterisks = getIsoscelesString(i);
         print(resultAsterisks.toString());
 
+    }
+
+    private StringBuilder getIsoscelesString(int i) {
+        StringBuilder resultAsterisks = new StringBuilder();
+        for (int j = 0; j < i; j++) {
+            resultAsterisks.append(getOneLineInIsoscelesTriangle(j + 1, i));
+            if (j != i - 1) {
+                resultAsterisks.append("\n");
+            }
+        }
+        return resultAsterisks;
     }
 
     private StringBuffer getOneLineInIsoscelesTriangle(int currentLine, int totalLines) {
@@ -24,7 +32,20 @@ class TWUDiamondExercises extends Asterisk {
 
 
     void drawDiamond(int i) {
-        print("  *  \n *** \n*****\n *** \n  *  \n");
+        StringBuilder resultAsterisks = new StringBuilder();
+        if (checkInputNumberIsInvalid(i)) return;
+        for (int j = 0; j < i; j++) {
+            if (j == i - 1) {
+                continue;
+            }
+            resultAsterisks.append(getOneLineInIsoscelesTriangle(j + 1, i));
+            if (j != i - 2) {
+                resultAsterisks.append("\n");
+            }
+        }
+        resultAsterisks.append("\n").append(getIsoscelesString(i).reverse());
+        print(resultAsterisks.toString());
+
     }
 }
 
