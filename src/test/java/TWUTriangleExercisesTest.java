@@ -35,39 +35,38 @@ public class TWUTriangleExercisesTest {
 
     @Test
     public void shouldPrintOneAsteriskWhenInput() throws Exception {
-        twuExercises.printAsterisk();
+        twuExercises.drawAsterisk();
         String s = "*\n";
         assertEquals(s, bytes.toString());
     }
 
     @Test
     public void shouldPrintNAsterisksOnOneLineWhenInputN() throws Exception {
-        twuExercises.printAsterisks(8);
+        twuExercises.drawAsterisks(8);
         String s = "********\n";
         assertEquals(s, bytes.toString());
     }
 
     @Test
     public void shouldPrint0AsterisksWhenInputNumberIsNonPositive() throws Exception {
-        twuExercises.printAsterisks(-1);
+        twuExercises.drawAsterisks(-1);
         String s = "\n";
         assertEquals(s, bytes.toString());
     }
 
     @Test
     public void shouldPrintNRowsAsteriskWhenInputN() throws Exception {
-        twuExercises.printRowsAsterisk(3);
+        twuExercises.drawRowsAsterisk(3);
         String s = "*\n*\n*\n\n";
         assertEquals(s, bytes.toString());
     }
 
     @Test
     public void shouldPrint0RowsAsteriskWhenInputNumberIsNonPositive() throws Exception {
-        twuExercises.printRowsAsterisk(-1);
+        twuExercises.drawRowsAsterisk(-1);
         String s = "\n";
         assertEquals(s, bytes.toString());
     }
-
 
 
 }

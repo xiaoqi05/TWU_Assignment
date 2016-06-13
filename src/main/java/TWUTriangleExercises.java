@@ -9,11 +9,11 @@ class TWUTriangleExercises {
     }
 
 
-    void printAsterisk() {
+    void drawAsterisk() {
         System.out.println("*");
     }
 
-    void printAsterisks(int i) {
+    void drawAsterisks(int i) {
         if (i <= 0) {
             System.out.println("");
             return;
@@ -25,7 +25,7 @@ class TWUTriangleExercises {
         System.out.println(resultAsterisks);
     }
 
-    void printRowsAsterisk(int i) {
+    void drawRowsAsterisk(int i) {
         if (i <= 0) {
             System.out.println("");
             return;
