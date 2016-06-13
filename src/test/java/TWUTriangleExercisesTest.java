@@ -11,6 +11,7 @@ public class TWUTriangleExercisesTest {
     private TWUTriangleExercises twuExercises;
     private PrintStream console = null;          // 声明（为null）：输出流 (字符设备) console
     private ByteArrayOutputStream bytes = null;  // 声明（为null）：bytes 用于缓存console 重定向过来的字符流
+    private Asterisk asterisk;
 
     @Before
     public void setUp() {
@@ -18,6 +19,7 @@ public class TWUTriangleExercisesTest {
         bytes = new ByteArrayOutputStream();    // 分配空间
         console = System.out;                   // 获取System.out 输出流的句柄
         System.setOut(new PrintStream(bytes));  // 将原本输出到控制台Console的字符流 重定向 到 bytes
+        asterisk = new Asterisk();
     }
 
     @After
@@ -27,8 +29,7 @@ public class TWUTriangleExercisesTest {
 
     @Test
     public void shouldPrintRight() throws Exception {
-        //assertEquals(twuExercises.getNumber(), 1);
-        twuExercises.printTest();
+        asterisk.print("hello world");
         String s = "hello world\n";
         assertEquals(s, bytes.toString());
     }

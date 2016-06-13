@@ -3,12 +3,6 @@ class TWUTriangleExercises extends Asterisk {
     TWUTriangleExercises() {
     }
 
-
-    void printTest() {
-        System.out.println("hello world");
-    }
-
-
     void drawAsterisk() {
         System.out.println(getNAsterisks(1));
     }
