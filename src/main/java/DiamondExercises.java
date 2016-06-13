@@ -1,6 +1,6 @@
 
-class TWUDiamondExercises extends Asterisk {
-    TWUDiamondExercises() {
+class DiamondExercises extends Asterisk {
+    DiamondExercises() {
     }
 
     void drawIsoscelesTriangle(int i) {

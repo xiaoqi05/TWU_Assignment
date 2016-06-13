@@ -1,6 +1,6 @@
 
-class TWUTriangleExercises extends Asterisk {
-    TWUTriangleExercises() {
+class TriangleExercises extends Asterisk {
+    TriangleExercises() {
     }
 
     void drawAsterisk() {
