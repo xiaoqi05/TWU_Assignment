@@ -32,4 +32,11 @@ public class FizzBuzzGameTest {
         String s = "FizzBuzz";
         assertEquals(s, result);
     }
+
+    @Test
+    public void shouldPrintNumberWhenNumberIsOnlyNotDivisibleByThreeAndFive() throws Exception {
+        String result = fizzBuzzGame.sayNumber(16);
+        String s = "16";
+        assertEquals(s, result);
+    }
 }

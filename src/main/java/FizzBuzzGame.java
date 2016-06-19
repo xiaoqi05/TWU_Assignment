@@ -20,16 +20,17 @@ public class FizzBuzzGame {
     }
 
     public String sayNumber(int i) {
-        String result;
-        if (i % 15 == 0) {
-            result = "FizzBuzz";
-        } else if (i % 3 == 0) {
-            result = "Fizz";
-        } else if (i % 5 == 0) {
-            result = "Buzz";
-        } else {
-            result = i + "";
-        }
+        String result = "";
+        int aliquotOfFifteen = 15;
+        int aliquotOfThere = 3;
+        int aliquotOfFive = 5;
+
+        result += i % aliquotOfFifteen == 0 ? "FizzBuzz" : "";
+        result += i % aliquotOfFifteen != 0 && i % aliquotOfThere == 0 ? "Fizz" : "";
+        result += i % aliquotOfFifteen != 0 && i % aliquotOfFive == 0 ? "Buzz" : "";
+
+        result += result.equals("") ? i : "";
+
 
         return result;
     }
