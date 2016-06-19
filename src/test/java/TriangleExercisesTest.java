@@ -29,50 +29,50 @@ public class TriangleExercisesTest {
 
     @Test
     public void shouldPrintRight() throws Exception {
-        asteriskHelper.print("hello world");
         String s = "hello world\n";
+        asteriskHelper.print("hello world");
         assertEquals(s, bytes.toString());
     }
 
     @Test
     public void shouldPrintOneAsteriskWhenInput() throws Exception {
-        twuExercises.drawAsterisk();
         String s = "*\n";
+        twuExercises.drawAsterisk();
         assertEquals(s, bytes.toString());
     }
 
     @Test
     public void shouldPrintNAsterisksOnOneLineWhenInputN() throws Exception {
-        twuExercises.drawAsterisks(8);
         String s = "********\n";
+        twuExercises.drawAsterisks(8);
         assertEquals(s, bytes.toString());
     }
 
     @Test
     public void shouldPrint0AsterisksWhenInputNumberIsNonPositive() throws Exception {
-        twuExercises.drawAsterisks(-1);
         String s = "\n";
+        twuExercises.drawAsterisks(-1);
         assertEquals(s, bytes.toString());
     }
 
     @Test
     public void shouldPrintNRowsAsteriskWhenInputN() throws Exception {
-        twuExercises.drawRowsAsterisk(3);
         String s = "*\n*\n*\n";
+        twuExercises.drawRowsAsterisk(3);
         assertEquals(s, bytes.toString());
     }
 
     @Test
     public void shouldPrint0RowsAsteriskWhenInputNumberIsNonPositive() throws Exception {
-        twuExercises.drawRowsAsterisk(-1);
         String s = "";
+        twuExercises.drawRowsAsterisk(-1);
         assertEquals(s, bytes.toString());
     }
 
     @Test
     public void shouldPrintRightTriangleWithNAsteriskSideLengthWhenInputN() throws Exception {
-        twuExercises.drawRightTriangle(3);
         String s = "*\n**\n***\n";
+        twuExercises.drawRightTriangle(3);
         assertEquals(s, bytes.toString());
     }
 

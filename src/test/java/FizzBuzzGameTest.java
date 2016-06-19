@@ -14,29 +14,29 @@ public class FizzBuzzGameTest {
 
     @Test
     public void shouldPrintFizzWhenNumberIsOnlyDivisibleByThree() throws Exception {
-        String result = fizzBuzzGame.sayNumber(3);
         String s = "Fizz";
+        String result = fizzBuzzGame.sayNumber(3);
         assertEquals(s, result);
     }
 
     @Test
     public void shouldPrintBuzzWhenNumberIsOnlyDivisibleByThree() throws Exception {
-        String result = fizzBuzzGame.sayNumber(5);
         String s = "Buzz";
+        String result = fizzBuzzGame.sayNumber(5);
         assertEquals(s, result);
     }
 
     @Test
     public void shouldPrintFizzBuzzWhenNumberIsOnlyDivisibleByThree() throws Exception {
-        String result = fizzBuzzGame.sayNumber(15);
         String s = "FizzBuzz";
+        String result = fizzBuzzGame.sayNumber(15);
         assertEquals(s, result);
     }
 
     @Test
     public void shouldPrintNumberWhenNumberIsOnlyNotDivisibleByThreeAndFive() throws Exception {
-        String result = fizzBuzzGame.sayNumber(16);
         String s = "16";
+        String result = fizzBuzzGame.sayNumber(16);
         assertEquals(s, result);
     }
 }

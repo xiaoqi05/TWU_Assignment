@@ -27,22 +27,22 @@ public class DiamondExercisesTest {
 
     @Test
     public void shouldPrintIsoscelesTriangleWithNAsteriskSideLengthWhenInputN() throws Exception {
-        twuExercises.drawIsoscelesTriangle(3);
         String s = "  *  \n *** \n*****\n";
+        twuExercises.drawIsoscelesTriangle(3);
         assertEquals(s, bytes.toString());
     }
 
     @Test
     public void shouldPrintCenteredDiamondWithNAsteriskSideLengthWhenInputN() throws Exception {
-        twuExercises.drawDiamond(3);
         String s = "  *  \n *** \n*****\n *** \n  *  \n";
+        twuExercises.drawDiamond(3);
         assertEquals(s, bytes.toString());
     }
 
     @Test
     public void shouldPrintCenteredDiamondWithNameInMiddle() throws Exception {
-        twuExercises.drawDiamondWithNameInMiddle(3);
         String s = "  *  \n *** \nxiaoqi\n *** \n  *  \n";
+        twuExercises.drawDiamondWithNameInMiddle(3);
         assertEquals(s, bytes.toString());
     }
 

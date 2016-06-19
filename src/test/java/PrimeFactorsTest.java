@@ -19,15 +19,15 @@ public class PrimeFactorsTest {
 
     @Test
     public void shouldReturnRightList() throws Exception {
-        List<Integer> generate = primeFactors.generate(30);
         List<Integer> list = Arrays.asList(2, 3, 5);
+        List<Integer> generate = primeFactors.generate(30);
         assertEquals(list, generate);
     }
 
     @Test
     public void shouldReturnNullListWhenInput1() throws Exception {
-        List<Integer> generate = primeFactors.generate(1);
         List<Integer> list = Collections.emptyList();
+        List<Integer> generate = primeFactors.generate(1);
         assertEquals(list, generate);
     }
 
