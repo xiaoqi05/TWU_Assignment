@@ -1,11 +1,11 @@
 
-class DiamondExercises  {
-    AsteriskHelper asteriskHelper;
-    DiamondExercises() {
+public class DiamondExercises  {
+    private AsteriskHelper asteriskHelper;
+    public DiamondExercises() {
         asteriskHelper = new AsteriskHelper();
     }
 
-    void drawIsoscelesTriangle(int i) {
+    public void drawIsoscelesTriangle(int i) {
         if (asteriskHelper.checkInputNumberIsInvalid(i)) return;
         StringBuilder resultAsterisks = getIsoscelesString(i);
         asteriskHelper.print(resultAsterisks.toString());
@@ -33,7 +33,7 @@ class DiamondExercises  {
     }
 
 
-    void drawDiamond(int i) {
+    public void drawDiamond(int i) {
         StringBuilder resultAsterisks = new StringBuilder();
         if (asteriskHelper.checkInputNumberIsInvalid(i)) return;
         resultAsterisks.append(getDiamondWithoutLastLine(i));
@@ -56,7 +56,7 @@ class DiamondExercises  {
         return resultAsterisks;
     }
 
-    void drawDiamondWithNameInMiddle(int i) {
+    public void drawDiamondWithNameInMiddle(int i) {
         StringBuilder resultAsterisks = new StringBuilder();
         if (asteriskHelper.checkInputNumberIsInvalid(i)) return;
         StringBuilder withoutLastLine = getDiamondWithoutLastLine(i);
