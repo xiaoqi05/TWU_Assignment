@@ -11,7 +11,7 @@ public class TriangleExercisesTest {
     private TriangleExercises twuExercises;
     private PrintStream console = null;
     private ByteArrayOutputStream bytes = null;
-    private Asterisk asterisk;
+    private AsteriskHelper asteriskHelper;
 
     @Before
     public void setUp() {
@@ -19,7 +19,7 @@ public class TriangleExercisesTest {
         bytes = new ByteArrayOutputStream();
         console = System.out;
         System.setOut(new PrintStream(bytes));
-        asterisk = new Asterisk();
+        asteriskHelper = new AsteriskHelper();
     }
 
     @After
@@ -29,7 +29,7 @@ public class TriangleExercisesTest {
 
     @Test
     public void shouldPrintRight() throws Exception {
-        asterisk.print("hello world");
+        asteriskHelper.print("hello world");
         String s = "hello world\n";
         assertEquals(s, bytes.toString());
     }

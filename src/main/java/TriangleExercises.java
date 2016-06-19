@@ -1,5 +1,5 @@
 
-class TriangleExercises extends Asterisk {
+class TriangleExercises extends AsteriskHelper {
     TriangleExercises() {
     }
 

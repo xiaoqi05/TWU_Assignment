@@ -1,5 +1,5 @@
 
-class DiamondExercises extends Asterisk {
+class DiamondExercises extends AsteriskHelper {
     DiamondExercises() {
     }
 
