@@ -1,12 +1,14 @@
 
-class DiamondExercises extends AsteriskHelper {
+class DiamondExercises  {
+    AsteriskHelper asteriskHelper;
     DiamondExercises() {
+        asteriskHelper = new AsteriskHelper();
     }
 
     void drawIsoscelesTriangle(int i) {
-        if (checkInputNumberIsInvalid(i)) return;
+        if (asteriskHelper.checkInputNumberIsInvalid(i)) return;
         StringBuilder resultAsterisks = getIsoscelesString(i);
-        print(resultAsterisks.toString());
+        asteriskHelper.print(resultAsterisks.toString());
 
     }
 
@@ -24,19 +26,19 @@ class DiamondExercises extends AsteriskHelper {
     private StringBuffer getOneLineInIsoscelesTriangle(int currentLine, int totalLines) {
         StringBuffer resultAsterisks = new StringBuffer();
         int currentNumberOfAsterisks = 1 + (currentLine - 1) * 2;
-        resultAsterisks.append(getNBlanks(totalLines - currentLine)).
-                append(getNAsterisks(currentNumberOfAsterisks)).
-                append(getNBlanks(totalLines - currentLine));
+        resultAsterisks.append(asteriskHelper.getNBlanks(totalLines - currentLine)).
+                append(asteriskHelper.getNAsterisks(currentNumberOfAsterisks)).
+                append(asteriskHelper.getNBlanks(totalLines - currentLine));
         return resultAsterisks;
     }
 
 
     void drawDiamond(int i) {
         StringBuilder resultAsterisks = new StringBuilder();
-        if (checkInputNumberIsInvalid(i)) return;
+        if (asteriskHelper.checkInputNumberIsInvalid(i)) return;
         resultAsterisks.append(getDiamondWithoutLastLine(i));
         resultAsterisks.append("\n").append(getIsoscelesString(i).reverse());
-        print(resultAsterisks.toString());
+        asteriskHelper.print(resultAsterisks.toString());
 
     }
 
@@ -56,11 +58,11 @@ class DiamondExercises extends AsteriskHelper {
 
     void drawDiamondWithNameInMiddle(int i) {
         StringBuilder resultAsterisks = new StringBuilder();
-        if (checkInputNumberIsInvalid(i)) return;
+        if (asteriskHelper.checkInputNumberIsInvalid(i)) return;
         StringBuilder withoutLastLine = getDiamondWithoutLastLine(i);
         resultAsterisks.append(withoutLastLine);
         resultAsterisks.append("\nxiaoqi\n").append(withoutLastLine.reverse());
-        print(resultAsterisks.toString());
+        asteriskHelper.print(resultAsterisks.toString());
     }
 }
 
