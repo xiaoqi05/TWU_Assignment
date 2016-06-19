@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class TriangleExercisesTest {
     private TriangleExercises twuExercises;
@@ -30,7 +30,7 @@ public class TriangleExercisesTest {
     @Test
     public void shouldPrintRight() throws Exception {
         String s = "hello world\n";
-        asteriskHelper.print("hello world");
+        Printer.print("hello world");
         assertEquals(s, bytes.toString());
     }
 

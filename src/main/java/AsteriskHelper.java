@@ -15,13 +15,9 @@ public class AsteriskHelper {
         return stringBuffer;
     }
 
-    public void print(String content) {
-        System.out.println(content);
-    }
-
     public boolean checkInputNumberIsInvalid(int i) {
         if (i <= 0) {
-            print("");
+            Printer.print("");
             return true;
         }
         return false;

@@ -8,7 +8,7 @@ public class DiamondExercises  {
     public void drawIsoscelesTriangle(int i) {
         if (asteriskHelper.checkInputNumberIsInvalid(i)) return;
         StringBuilder resultAsterisks = getIsoscelesString(i);
-        asteriskHelper.print(resultAsterisks.toString());
+        Printer.print(resultAsterisks.toString());
 
     }
 
@@ -38,7 +38,7 @@ public class DiamondExercises  {
         if (asteriskHelper.checkInputNumberIsInvalid(i)) return;
         resultAsterisks.append(getDiamondWithoutLastLine(i));
         resultAsterisks.append("\n").append(getIsoscelesString(i).reverse());
-        asteriskHelper.print(resultAsterisks.toString());
+        Printer.print(resultAsterisks.toString());
 
     }
 
@@ -62,7 +62,7 @@ public class DiamondExercises  {
         StringBuilder withoutLastLine = getDiamondWithoutLastLine(i);
         resultAsterisks.append(withoutLastLine);
         resultAsterisks.append("\nxiaoqi\n").append(withoutLastLine.reverse());
-        asteriskHelper.print(resultAsterisks.toString());
+        Printer.print(resultAsterisks.toString());
     }
 }
 

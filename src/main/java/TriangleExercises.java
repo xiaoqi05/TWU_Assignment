@@ -6,12 +6,12 @@ public class TriangleExercises  {
     }
 
     public void drawAsterisk() {
-        asteriskHelper.print(asteriskHelper.getNAsterisks(1).toString());
+        Printer.print(asteriskHelper.getNAsterisks(1).toString());
     }
 
     public void drawAsterisks(int i) {
         if (asteriskHelper.checkInputNumberIsInvalid(i)) return;
-        asteriskHelper.print(asteriskHelper.getNAsterisks(i).toString());
+        Printer.print(asteriskHelper.getNAsterisks(i).toString());
     }
 
     public void drawRowsAsterisk(int i) {
