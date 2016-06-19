@@ -1,7 +1,7 @@
-class FizzBuzzGame {
+public class FizzBuzzGame {
     private int[] numbers;
 
-    FizzBuzzGame() {
+    public FizzBuzzGame() {
         this.numbers = new int[100];
         for (int i = 0; i < 100; i++) {
             numbers[i] = i + 1;
@@ -13,13 +13,13 @@ class FizzBuzzGame {
     }
 
 
-    void fizzBuzz() {
+    public void fizzBuzz() {
         for (int i : numbers) {
             print(sayNumber(i));
         }
     }
 
-    String sayNumber(int i) {
+    public String sayNumber(int i) {
         String result;
         if (i % 15 == 0) {
             result = "FizzBuzz";

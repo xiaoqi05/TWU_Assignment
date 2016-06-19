@@ -1,24 +1,26 @@
 
-class TriangleExercises extends AsteriskHelper {
-    TriangleExercises() {
+public class TriangleExercises  {
+    private AsteriskHelper asteriskHelper;
+    public TriangleExercises() {
+        asteriskHelper = new AsteriskHelper();
     }
 
-    void drawAsterisk() {
-        print(getNAsterisks(1).toString());
+    public void drawAsterisk() {
+        asteriskHelper.print(asteriskHelper.getNAsterisks(1).toString());
     }
 
-    void drawAsterisks(int i) {
-        if (checkInputNumberIsInvalid(i)) return;
-        print(getNAsterisks(i).toString());
+    public void drawAsterisks(int i) {
+        if (asteriskHelper.checkInputNumberIsInvalid(i)) return;
+        asteriskHelper.print(asteriskHelper.getNAsterisks(i).toString());
     }
 
-    void drawRowsAsterisk(int i) {
+    public void drawRowsAsterisk(int i) {
         for (int j = 0; j < i; j++) {
             drawAsterisks(1);
         }
     }
 
-    void drawRightTriangle(int i) {
+    public void drawRightTriangle(int i) {
         for (int j = 0; j < i; j++) {
             drawAsterisks(j + 1);
         }
