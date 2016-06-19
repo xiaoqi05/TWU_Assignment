@@ -8,16 +8,6 @@ public class FizzBuzzGame {
         }
     }
 
-    private void print(String content) {
-        System.out.println(content);
-    }
-
-
-    public void fizzBuzz() {
-        for (int i : numbers) {
-            print(sayNumber(i));
-        }
-    }
 
     public String sayNumber(int i) {
         String result = "";
